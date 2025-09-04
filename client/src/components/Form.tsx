@@ -14,7 +14,8 @@ function Form() {
         getData(data);
     };
 
-    const PREDICT_ROUTE = import.meta.env.VITE_PREDICT_ROUTE || "http://localhost:5000/api/predict";
+    // the url provided by render after deplying the web service
+    const PREDICT_ROUTE = "https://autovaluator-4f6t.onrender.com/api/predict";
 
     async function getData(data: any) {
         const response = await fetch(PREDICT_ROUTE, {
@@ -45,6 +46,7 @@ function Form() {
                             Miles
                         </label>
                         <input
+                            required
                             type="number"
                             name="miles"
                             className="w-full px-3 py-2 rounded-lg border border-gray-600 bg-slate-900 text-gray-100"
@@ -56,6 +58,7 @@ function Form() {
                             Year
                         </label>
                         <input
+                            required
                             type="number"
                             name="year"
                             className="w-full px-3 py-2 rounded-lg border border-gray-600 bg-slate-900 text-gray-100"
@@ -68,6 +71,7 @@ function Form() {
                             Engine Size
                         </label>
                         <input
+                            required
                             type="number"
                             step="0.1"
                             name="engine_size"
@@ -83,6 +87,7 @@ function Form() {
                                 {/* some keys are named as body_type, so replace '_' with ' ' */}
                             </label>
                             <select
+                                required
                                 name={key}
                                 className="w-full px-3 py-2 rounded-lg border border-gray-600 bg-slate-900 text-gray-100"
                             >
