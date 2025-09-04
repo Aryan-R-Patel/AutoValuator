@@ -5,7 +5,7 @@ function Footer() {
                 <span className="text-sm">
                     © 2025 Aryan Patel |{" "}
                     <a
-                        href="https://github.com/aryan-r-patel"
+                        href="https://github.com/Aryan-R-Patel/AutoValuator"
                         target="_blank"
                         className="underline hover:text-sky-400 transition-colors"
                     >
